@@ -1,0 +1,277 @@
+body {
+
+    font-family: Arial, sans-serif;
+    /* Define a família de fontes do corpo do documento como Arial, uma 
+                fonte sans-serif, com um fallback genérico para qualquer 
+                sans-serif se o Arial não estiver disponível. */
+
+    display: flex;
+    /* Estabelece um contexto de flexbox para o elemento <body>, permitindo o 
+                uso de propriedades flexbox para alinhar e distribuir os 
+                elementos filhos. */
+
+    justify-content: center;
+    /* Alinha todos os elementos filhos do <body> horizontalmente ao 
+                centro do container flex. */
+
+    align-items: center;
+    /* Alinha todos os elementos filhos do <body> verticalmente ao 
+                centro do container flex. */
+
+    height: 100vh;
+    /* Define a altura do corpo do documento para ser 100% do viewport 
+                height (altura da janela de visualização), garantindo que o 
+                corpo ocupe toda a altura da tela visível. */
+
+    background-color: #f5f5f5;
+    /* Define a cor de fundo do corpo do documento para um cinza claro (#f5f5f5), 
+                proporcionando um fundo neutro para os elementos da página. */
+
+    margin: 0;
+    /* Remove as margens padrão do <body>, permitindo que o conteúdo estenda-se 
+                completamente até as bordas do viewport. */
+
+}
+
+.tabela-precos {
+
+    display: flex;
+    /* Aplica o flexbox ao container .tabela-precos, permitindo o uso de 
+                propriedades flexbox para organizar seus elementos filhos. */
+
+    justify-content: space-around;
+    /* Distribui espaço uniformemente ao redor de cada item filho 
+                dentro do container .tabela-precos, assegurando que haja 
+                um espaçamento equitativo entre eles e em relação às 
+                bordas do container. */
+
+    width: 80%;
+    /* Define a largura do container .tabela-precos para ser 80% da 
+                largura do seu container pai (neste caso, o <body>), 
+                centralizando o conteúdo e deixando espaço nas laterais. */
+
+}
+
+.plano {
+
+    background-color: #fff;
+    /* Define a cor de fundo dos elementos com a classe .plano para 
+                branco (#fff), o que ajuda a destacá-los no contexto 
+                geral da página. */
+
+    border-radius: 8px;
+    /* Aplica bordas arredondadas de 8 pixels a todos os elementos .plano, 
+                suavizando as bordas para um visual mais moderno e amigável. */
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Adiciona uma sombra sutil ao redor dos elementos .plano, utilizando RGBA 
+                para uma cor preta com 10% de opacidade, melhorando a percepção de 
+                profundidade na interface. */
+
+    text-align: center;
+    /* Centraliza o texto dentro dos elementos .plano, garantindo que o 
+                conteúdo textual esteja alinhado de forma uniforme e 
+                esteticamente agradável. */
+
+    width: 30%;
+    /* Define a largura dos elementos .plano para 30% do seu container 
+                pai, ajudando a manter uma disposição harmoniosa e consistente 
+                dos planos na página. */
+
+    padding-bottom: 20px;
+    /* Adiciona um padding de 20 pixels na parte inferior dos elementos .plano, 
+                aumentando o espaço entre o conteúdo do plano e sua borda 
+                inferior, o que melhora a legibilidade e a apresentação visual. */
+
+    display: flex;
+    /* Estabelece um contexto de flexbox para cada elemento .plano, o que 
+                facilita a organização interna dos itens contidos 
+                nesses elementos. */
+
+    flex-direction: column;
+    /* Orienta os itens filhos dos elementos .plano em uma coluna (verticalmente), o 
+                que é ideal para estruturas de listagem como as dos 
+                planos de serviços. */
+
+    justify-content: space-between;
+    /* Distribui o espaço disponível entre os itens filhos de .plano de 
+                modo que haja uma separação igual entre eles, proporcionando 
+                um layout mais equilibrado e visualmente atraente. */
+
+    margin: 0 10px;
+    /* Define as margens laterais de cada elemento .plano para 10 pixels, 
+                separando-os visualmente uns dos outros e evitando que os 
+                elementos se toquem diretamente. */
+
+}
+
+.destaque {
+
+    transform: scale(1.1);
+    /* Aplica uma transformação de escala de 1.1 aos elementos com a 
+                classe .destaque, fazendo com que eles aumentem em 10% em 
+                tamanho em relação ao seu estado original. 
+        Esta transformação é usada para destacar visualmente um plano 
+                específico, como um plano premium ou mais vantajoso. */
+
+}
+
+.cabecalho {
+
+    position: relative;
+    /* Define a posição do elemento como relativa, permitindo que os 
+                elementos filhos posicionados de forma absoluta sejam 
+                alinhados em relação a este contêiner. */
+
+    background: linear-gradient(45deg, #007bff, #6610f2);
+    /* Aplica um gradiente linear como plano de fundo que começa com a 
+                cor azul (#007bff) e transiciona para o violeta (#6610f2) em 
+                um ângulo de 45 graus, criando um efeito visual 
+                atraente e moderno. */
+
+    color: #fff;
+    /* Define a cor do texto dentro do .cabecalho para branco (#fff), 
+                garantindo legibilidade contra o fundo colorido do gradiente. */
+
+    padding: 20px 0;
+    /* Aplica um espaçamento interno de 20 pixels no topo e na base do 
+                elemento .cabecalho, contribuindo para uma melhor distribuição 
+                visual do conteúdo dentro do elemento. */
+
+    border-radius: 8px 8px 0 0;
+    /* Arredonda os cantos superiores esquerdo e direito do .cabecalho com 
+                um raio de 8 pixels, enquanto os cantos inferiores permanecem 
+                sem arredondamento, criando uma forma coesa com elementos a
+                baixo que possam se encaixar. */
+
+    overflow: hidden;
+    /* Previne que qualquer conteúdo filho que exceda o tamanho do .cabecalho 
+                seja exibido, mantendo todos os efeitos visuais, como sombras ou 
+                bordas, dentro dos limites definidos. */
+
+}
+
+.destaque .cabecalho {
+
+    background: linear-gradient(45deg, #1d00ff, #00bfff);
+    /* Para elementos .cabecalho que estão dentro de um contêiner .destaque, 
+                redefine o plano de fundo para um gradiente linear 
+                começando de azul escuro (#1d00ff) a um azul claro (#00bfff). 
+        Este gradiente diferencia visualmente o plano destacado dos outros, 
+                acentuando sua importância e atração visual. */
+
+}
+
+.cabecalho::after {
+
+    content: "";
+
+    position: absolute;
+
+    bottom: -20px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    border-width: 20px 20px 0;
+
+    border-style: solid;
+
+    border-color: #fff transparent transparent transparent;
+
+}
+
+.cabecalho h2 {
+
+    margin: 0;
+
+    font-size: 24px;
+
+}
+
+.cabecalho p {
+
+    margin: 5px 0 0;
+
+}
+
+.preco {
+
+    font-size: 40px;
+
+    margin: 20px 0;
+
+    color: #333;
+
+}
+
+ul {
+
+    list-style: none;
+
+    padding: 0;
+
+    text-align: left;
+
+    margin: 0 20px;
+
+    flex-grow: 1;
+
+}
+
+ul li {
+
+    padding: 10px 0;
+
+    border-bottom: 1px solid #ddd;
+
+}
+
+.check {
+
+    color: green;
+
+    float: right;
+
+}
+
+.nao {
+
+    color: red;
+
+    float: right;
+
+}
+
+.botao-comprar {
+
+    background-color: #007bff;
+
+    color: #fff;
+
+    border: none;
+
+    border-radius: 4px;
+
+    padding: 10px 20px;
+
+    cursor: pointer;
+
+    margin-top: 20px;
+
+    text-transform: uppercase;
+
+}
+
+.destaque .botao-comprar {
+
+    background-color: #1d00ff;
+
+}
+
+.botao-comprar:hover {
+
+    opacity: 0.9;
+
+}

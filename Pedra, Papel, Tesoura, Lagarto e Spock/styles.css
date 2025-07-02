@@ -1,0 +1,226 @@
+body {
+
+    font-family: Arial, sans-serif;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    height: 100vh;
+
+    margin: 0;
+
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+
+}
+
+.container {
+
+    text-align: center;
+
+    background-color: white;
+
+    padding: 30px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    max-width: 600px;
+
+    width: 100%;
+
+}
+
+h1 {
+
+    color: #333;
+
+    margin-bottom: 20px;
+
+}
+
+.regras-btn {
+
+    background-color: #4caf50;
+
+    color: white;
+
+    border: none;
+
+    padding: 10px 20px;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    display: inline-block;
+
+    font-size: 16px;
+
+    margin-bottom: 20px;
+
+    cursor: pointer;
+
+    border-radius: 5px;
+
+    transition:  background-color 0.3s ease;
+
+}
+
+.regras-btn:hover {
+
+    background-color: #45a049;
+
+}
+
+.opcoes {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-bottom: 20px;
+
+    flex-wrap: wrap;
+
+}
+
+.opcao {
+
+    width: 80px;
+
+    cursor: pointer;
+
+    transition: transform 0.2s, box-shadow 0.2s;
+
+}
+
+.opcao:hover {
+
+    transform: scale(1.1);
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+}
+
+.resultado-container {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 50px;
+
+    margin-top: 20px;
+
+    background-color: #e0eaff;
+
+    padding: 20px;
+
+    border-radius: 10px;
+
+}
+
+.escolha {
+
+    text-align: center;
+
+}
+
+.escolha-imagem {
+
+    width: 80px;
+
+    border-radius: 10px;
+
+}
+
+.resultado {
+
+    font-size: 24px;
+
+    margin-top: 20px;
+
+    font-weight: bold;
+
+    color: #333;
+
+}
+
+.pontuacao {
+
+    font-size: 18px;
+    
+    margin-top: 20px;
+
+    color: #555;
+
+}
+
+.modal {
+
+    display: none;
+
+    position: fixed;
+
+    z-index: 1;
+
+    left: 0;
+
+    top: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    overflow: auto;
+
+    background-color: rgba(0, 0, 0, 0.4);
+
+}
+
+.modal-content {
+
+    background-color: #fefefe;
+
+    margin: 15% auto;
+
+    padding: 20px;
+
+    border: 1px solid #888;
+
+    width: 80%;
+
+    max-width: 500px;
+
+    border-radius: 10px;
+
+}
+
+.close-btn {
+
+    color: #aaa;
+
+    float: right;
+
+    font-size: 28px;
+
+    font-weight: bold;
+
+}
+
+.close-btn:hover, 
+.close-btn:focus {
+
+    color: black;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+}

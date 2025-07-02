@@ -1,0 +1,410 @@
+.contenedor-imagem {
+    /*define a posição do elemento como relativa. permitindo que posicione elementos filhos(como a descrição oculta) em relação a este conteiner*/
+    position: relative;
+    /*O elemento se comparta como um bloco, mas é disposto em linha com outros elementos, desde que haja espaço. basicamente coloca as imagens uma ao lado da outra*/
+    display: inline-block;
+     /*margin da espaço entre as imagens*/
+    margin: 20px;
+     /*Qualquer conteúdo que ultrapase os limetes do conteiner são cortados*/
+    overflow: hidden;
+     /*Arredonda os cantos do conteiner, suavizando*/
+    border-radius: 10px;
+
+}
+
+.contenedor-imagem img {
+    /*largura da imagem*/
+    width: 300px;
+    /*Altura*/
+    height: auto;
+    /*Aplica uma transição suave como opacidade, cor de fundo etc*/
+    /*ease especifica um tipo de temporização que começa lento, acelera no meio e termina lentamente, suavizando efeitos de hover ou foco*/
+    transition: all 0.5s ease;
+}
+
+.descricao-oculta {
+    /*Posiciona o elemnto de forma absoluta em relação ao conteiner mais proximo com posição nao estatica*/
+    position: absolute;
+    /*Ocupa toda a largura do conteiner da imagem*/
+    width: 100%;
+    /*Posiciona a descrição na parte inferior*/
+    bottom: 0;
+    /*cor de fundo*/
+    background-color: rgba(0, 0, 0, 0.7);
+    /*cor do texto*/
+    color: white;
+    /*centraliza o texto*/
+    text-align: center;
+    /*com esses valores centraliza o texto verticalmente*/
+    padding: 10px 0;
+    /*0 deixa totalmente transparente*/
+    opacity: 0;
+    /*Transiciona para uma opacidade suave*/
+    transition: opacity 0.5s ease;
+
+}
+
+.contenedor-imagem:hover .descricao-oculta {
+    /*Ao passar o mouse a opacidade muda para 1 (totalmente visivel)*/
+    opacity: 1;
+}
+/*Efeito de zoom com sombra*/
+#imagem1:hover img {
+    /*aumenta em 115% o tamanho da imagem e uma leve rotação nos eixos xy*/
+    transform: scale(1.15) rotate(5deg) rotateY(5deg);
+    /*Adiciona uma sombra profunda e dispersa ao redor da imagem, parecendo mais profunda e destacando*/
+    box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+    /*Garante suavidade nas transições*/
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+#imagem2:hover img {
+    /*Rotaciona a imagem em 180 graus*/
+    transform: rotateY(180deg);
+    transition: transform 1.0s ease
+}
+
+/*Efeito de pulsar*/
+#imagem3:hover img {
+    animation:  hearBeat 0.8s infinite;
+
+}
+/*Controla o ciclo da animação hearbeat*/
+@keyframes hearBeat {
+
+    0%, 100% {
+        transform: scale(1);
+        filter: brightness(100%);
+    }
+    25%, 75% {
+        transform: scale(1.2);
+        filter: brightness(120%);
+    }
+    50% {
+        transform: scale(1.1);
+        filter: brightness(110%);
+    }
+}
+/*Efeito de zoom na tela inteira*/
+#imagem4:hover img {
+    /*suaviza a transição*/
+    transition: transform 0.5s ease, position 0.5s ease;
+    /*muda o ponteiro do mouse*/
+    cursor: pointer;
+
+}
+
+#imagem4:hover img {
+    /*fixa a imagem o tempo todo*/
+    position: fixed;
+    /*top e left posicionem a imagem no topo e canto do navegador*/
+    top: 0;
+    left: 0;
+    /*define a largura pra ocupar tudo*/
+    width: 100vw;
+    /*define a altura para viewport(janela visivel do navegador)*/
+    height: 100vh;
+    /*A imagem ocupa todo o espaço disponivel sem distorção*/
+    object-fit: cover;
+    /*Todo conteudo da pagina com z-index abaixo do valor estipulado são sobrepostos*/
+    z-index: 9999;
+    /*remove qualquer transformação anterior*/
+    transform: none;
+}
+/*Efeito rotação tripla*/
+#imagem5:hover img {
+    /*ease-out faz a animação se iniciar rapidamente e desacelerar no final*/
+    transition: transform 0.5s ease-out;
+    /*Define o ponto de origem para as transformações de rotação*/
+    /*cente é para que a rotação ocorra no centro da imagem*/
+    transform-origin: center;
+
+}
+
+#imagem5:hover img {
+    /*animação de rotação tripla por 2 segundos*/
+    animation: rotateTriple 2s forwards;
+
+}
+
+@keyframes rotateTriple {
+    /*a animação começa no grau zero e vai subindo*/
+    0% {
+
+        transform: rotate(0deg);
+    }
+    
+    75% {
+
+        transform: rotate(1080deg);
+    }
+    /*volta a imgagem original*/
+    100% {
+
+        transform: rotate (0deg);
+   
+    }
+}
+/*Efeito de balanço suave*/
+#imagem6 img {
+    /*A imagem vai balançar a partir do centro e do topo horizontalmente*/
+    transform-origin: top center;
+    /*ease-in-out a animação é rápida somente no meio*/
+    transition: transform 0.5s ease-in-out;
+
+}
+
+#imagem6:hover img {
+
+    animation: swingAprimoradoHover 2s ease-in-out forwards;
+
+}
+
+@keyframes swingAprimoradoHover {
+
+    0%, 100% {
+
+        transform: rotate(0deg);
+    }
+    25% {
+
+        transform: rotate(15deg);;
+    }
+    50% {
+
+        transform: rotate(-15deg);;
+    }
+    75% {
+
+        transform: rotate(15deg);;
+    }
+}
+ /*Efeito holofote preto e branco*/
+#imagem7 {
+    /*Impede que sai dos limites do container*/
+    overflow: hidden;
+     /*posicionar dentro do conteiner*/
+    position: relative;
+
+}
+
+#imagem7 img {
+
+    transition: filter 0.5s ease, transform 0.5s ease;
+     /*Aplica filtro cinza*/
+    filter: grayscale(100%);
+     /*Mantem a imagem no tamanho original*/
+    transform: scale(1);
+
+}
+
+#imagem7:before {
+     /*para gerar pseudo-elemento, mesmo que nao tenha nada dentro*/
+    content: "";
+     /*posiciona o pseudo-elemento em relação ao primeiro elemento pai posicionado*/
+    position: absolute;
+
+    top: -100%;
+
+    left: -100%;
+
+    width: 200%;
+
+    height: 200%;
+     /*começa transparente no centro e vai se tornando preto até 70%*/
+    background: radial-gradient(circle, transparent 30%, black 70%);
+     /*Pseudo-elemento acima da imagem*/
+    z-index: 2;
+
+    transition: transform 0.5s ease, opacity 0.5s ease;
+
+    opacity: 0;
+
+    transform: scale(0);
+
+}
+
+#imagem7:hover img {
+     /*Remove o filtro cinza*/
+    filter: grayscale(0%);
+
+    transform: scale(1.1);
+
+}
+
+#imagem7:hover:before {
+
+    opacity: 1;
+
+    transform: scale(1);
+
+    animation: moveLight 5s infinite alternate ease-in-out;
+
+}
+
+@keyframes moveLight {
+
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+    25% {
+        transform: translate(50%, 50%) scale(1.5);
+    }
+    50% {
+        transform: translate(100%, 0) scale(1);
+    }
+    75% {
+        transform: translate(-50%, -50%) scale(1.5);
+    }
+    100% {
+        transform: translate(0,0) scale(1);
+    }
+}
+/*Efeito de onda luminosa*/
+#imagem8 {
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+#imagem8 img {
+
+    transition: transform 0.5s ease;
+    /*A imagem é tratada como um bloco, ocupando a largura total da linha*/
+    display: block;
+
+}
+
+#imagem8::after {
+
+    content: '';
+
+    position: absolute;
+
+    top: 0;
+    left: -150%;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(255, 255, 255, 0.2);
+    
+    transform: skewX(-20deg);
+
+    transition: left 0.7s ease-in-out;
+
+}
+
+#imagem8:hover::after {
+
+    left: 150%;
+
+    transition: left 0.7s ease-in-out;
+
+}
+
+#imagem9 img {
+
+    transition: transform 0.5s ease;
+
+    transform-origin: center;
+
+}
+
+#imagem9:hover img {
+
+    animation: rotateVerticalTriple 2s forwards;
+
+}
+
+@keyframes rotateVerticalTriple {
+    from {
+
+        transform: rotate(0deg);
+    
+    }
+    to {
+
+        transform: rotateX(1080deg);
+
+    }
+}
+
+.contenedor-imagem#imagem10 {
+
+    position: relative;
+
+    width: 300px;
+
+    height: 200px;
+
+    overflow: hidden;
+    /*Permite que o conteiner se comporte como um bloco, mas tbm seja alinhado com outros elementos como texto ou outros blocos*/
+    display: inline-block;
+
+}
+
+#imagem10 img {
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    transition: transform 0.5s ease-in-out;
+
+}
+
+#imagem10 .descricao-oculta {
+
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%) translateX(-100%);
+    /*Impede que o texto dentro da descrição seja quebrado*/
+    white-space: nowrap;
+
+    padding: 20px;
+
+    background-color: rgba(0, 0, 0, 0.7);
+
+    color: white;
+
+    font-size: 20px;
+    
+    transition: transform 0.5s ease-in-out;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    opacity: 0;
+}
+
+#imagem10:hover img {
+
+    transform: translateX(100%);
+}
+
+#imagem10:hover .descricao-oculta {
+
+    transform: translate(-50%, -50%) translateX(0%);
+
+    opacity: 1;
+
+}
