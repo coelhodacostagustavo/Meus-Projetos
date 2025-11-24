@@ -1,0 +1,43 @@
+/*Seletores globais para elementos body e html */
+body, html {
+    /* Remove margens*/
+    margin: 0;
+    /*Remove preenchimento padrão do navegador*/
+    padding: 0;
+    /*define a altura*/
+    height: 100%;
+    /*Modelo de caixa flexível e responsivo*/
+    display: flex;
+    /*Alinha os itens filhos horizontalmente ao centro do container*/
+    justify-content: center;
+    /*Alinha verticalmente*/
+    align-items: center;
+    /*Define o tipo de fonte, arial sendo principal e sans-serif como fallback*/
+    font-family: Arial, sans-serif;
+
+}
+
+/*Estilização específica para a divisão com classe*/
+.trocador-de-cores {
+    /*alinha o texto ao centro da divisão*/
+    text-align: center;
+    /*Adiciona preenchimento de 20px em todos os lados dentro da divisão*/
+    padding: 20px;
+    /*Adiciona uma borda de 1px de espessura e preta ao redor da divisão*/
+    border: 1px solid #000;
+    /*Arredonda os cantos da borda, deixando suave*/
+    border-radius: 8px;
+
+}
+
+/*Estilização especifica para todos os elementos button*/
+button{
+    /*Define o preenchimento interno do botao com 10 px na vertical e 20px na horizontal*/
+    padding: 10px 20px;
+    /*Define o tamanho da fonte do texto dentro do botão com 16px*/
+    font-size: 16px;
+    /*Muda o cursor para "mãozinha quando passa o mouse em cima do botão */
+    cursor: pointer; 
+
+}
+
