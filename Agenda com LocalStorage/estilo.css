@@ -1,0 +1,118 @@
+body {
+
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+   background-color: #f4f4f4;
+
+   padding: 20px;
+
+   color: #34495e;
+
+}
+
+h1 {
+
+    color: #2c3e50;
+
+    text-align: center;
+
+    font-size: 24px;
+
+}
+
+.filtro, .formulario, .total-contatos {
+
+    background-color: white;
+
+    padding: 20px;
+
+    margin-bottom: 20px;
+
+    border-radius: 8px;
+
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+
+    border: 1px solid #190964;
+
+}
+
+input[type="text"], input[type="email"], button {
+
+    padding: 10px;
+
+    margin-right: 5px;
+
+    border-radius: 5px;
+
+    border: 1px solid #ccc;
+
+    font-size: 16px;
+}
+
+button {
+
+    background-color: #0a671c;;
+
+    color: white;
+
+    cursor: pointer;
+
+    border: none;
+
+}
+
+button:hover {
+
+    background-color: #04426b;
+
+}
+
+table {
+
+    width: 100%;
+    /*Une todas as bordas da tabela em apenas uma*/
+    border-collapse: collapse;
+
+    margin-top: 20px;
+
+    background-color: white;
+
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Aplica uma sombra ao redor da tabela para criar um efeito 
+            visual de elevação. Os parâmetros da sombra são:
+       - Deslocamento horizontal de 0: a sombra é aplicada diretamente
+             abaixo do elemento sem deslocamento horizontal.
+       - Deslocamento vertical de 4px: levanta a sombra um pouco abaixo do 
+            elemento para dar a impressão de que a tabela está flutuando 
+            acima do resto do conteúdo.
+       - Desfoque de 6px: suaviza as bordas da sombra, tornando-a 
+            menos definida e mais natural.
+       - Cor rgba(0, 0, 0, 0.1): uma cor preta com 10% de opacidade, tornando a 
+            sombra sutil e não muito intrusiva, adequada para a maioria dos 
+            designs que buscam sofisticação sem excesso. */
+
+}
+
+th, td {
+
+    padding: 15px;
+
+    border: 1px solid #558d4a;
+
+    text-align: left;
+
+    font-size: 16px;
+
+}
+
+th {
+
+    background-color: #226678;
+
+    color: white;
+
+}
+
+
+
+
